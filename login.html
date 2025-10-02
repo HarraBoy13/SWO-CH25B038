@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login Page </title>
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Mono|Google Sans Mono|PT Mono|Space Mono|Overpass Mono|">
+    </head>
+    <body>
+        <header>
+            <div class="imglink"><img src="shaastra.png" alt='Shaastra 2026'></div>
+            <a onclick="openTab('lgn')" class="nav" href="#">Login</a>
+            <a onclick="openTab('rgsr')" class="nav" href="#">Register</a>
+        </header>
+        <br><br><br>
+        <main id="rgsr">
+            <div class="register">
+                <form name='myForm' action="submit.php" method="post" onsubmit="validateForm()">
+                    <fieldset>
+                        <legend>
+                            Register for Shaastra @IITM
+                        </legend>
+                        <h1>Register</h1>
+                        <table class="box">
+                            <tr>
+                                <td>
+                                    <label for="name">Name</label>
+                                    <input name="name" type="textbox" placeholder="Enter your name" required>
+                                </td>
+                                <td>
+                                    <label for="email">E-mail</label>
+                                    <input name="email" type="email" placeholder="********@gmail.com" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>                                    
+                                    <label for="ph">Phone Number</label>
+                                    <input name="ph" type="textbox" placeholder="+91" required>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td> 
+                                    <label for="pwd">Password</label>
+                                    <input id="pwd" name="pwd" type="password" required>
+                                </td>
+                                <td>
+                                    <label for="repwd">Re-Type Password</label>
+                                    <input id="repwd" name="repwd" type="password" required>
+                                </td>
+                            </tr>
+                        </table><br>
+                        <input type="checkbox" name="tac" value="yes" required>
+                        <label for="tac" style="display:inline;">I have accepted the terms and conditions</label><br><br><br>
+                        <input type="submit" value="Register">
+                        <br><br>
+                        <a id="log" href="#" onclick="openTab('lgn')">Already have an account?</a>
+                        <br>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+        <main id="lgn">
+            <div class="register">
+                <form action="submit.php" method="post">
+                    <fieldset>
+                        <legend>
+                            Login to Shaastra @IITM
+                        </legend>
+                        <h1>Login</h1>
+                        <table class="box">
+                            <tr>
+                                <td><label for="email">E-mail</label></td>
+                                <td><input name="email" type="email" placeholder="********@gmail.com" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="pwd">Password</label></td>
+                                <td><input name="pwd" type="password" required></td>
+                            </tr>
+                        </table>
+                        <br><br>
+                        <input type="submit" value="Login"><br><br>
+                        <a id="reg" href="#" onclick="openTab('rgsr')">New Here? Register Now</a>
+                        <br>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+        <footer>
+            &copy; Shaastra 2026 <br>
+            Made with ❤️ by Harish M <br>
+        </footer>
+        <script type="text/javascript" src="login.js">
+        </script>
+    </body>
+</html>
